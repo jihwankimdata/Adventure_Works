@@ -2,8 +2,8 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definitionProperties/2.0.0/schema.json",
   "version": "4.0",
   "datasetReference": {
-    "byConnection": {
-      "connectionString": "Data Source=powerbi://api.powerbi.com/v1.0/myorg/Adventure_Works;initial catalog=direct_lake_adventure_works;access mode=readonly;integrated security=ClaimsToken;semanticmodelid=96ddbada-f4e2-480c-8d90-f34bfe12c358"
+    "byPath": {
+      "path": "../direct_lake_adventure_works.SemanticModel"
     }
   }
 }
