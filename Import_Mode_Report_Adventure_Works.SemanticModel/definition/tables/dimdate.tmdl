@@ -19,6 +19,8 @@ table dimdate
 
 		annotation SummarizationSetBy = Automatic
 
+		annotation UnderlyingDateTimeDataType = Date
+
 	column DayNumberOfWeek
 		dataType: int64
 		formatString: 0
@@ -171,10 +173,9 @@ table dimdate
 		source =
 				let
 				    Source = Sql.Database("77oajh3wezeejnmdlu54fth3om-dmv4edvgwhgubprebu6z6x7bom.datawarehouse.fabric.microsoft.com", "Lakehouse_Adventure_Works"),
-				    dbo_dimsalesterritory = Source{[Schema="dbo",Item="dimdate"]}[Data],
-				    #"Changed Type" = Table.TransformColumnTypes(dbo_dimsalesterritory,{{"FullDateAlternateKey", type datetime}})
+				    dbo_dimsalesterritory = Source{[Schema="dbo",Item="dimdate"]}[Data]
 				in
-				    #"Changed Type"
+				    dbo_dimsalesterritory
 
 	annotation PBI_NavigationStepName = Navigation
 
