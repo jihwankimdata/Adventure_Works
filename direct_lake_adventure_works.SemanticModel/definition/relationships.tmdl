@@ -1,0 +1,16 @@
+relationship 39235228-df13-0769-9607-3760557f83b6
+	fromColumn: factinternetsales.CustomerKey
+	toColumn: dimcustomer.CustomerKey
+
+relationship 6e00e3d3-540f-46c8-8522-a5bc7e89f766
+	fromColumn: factinternetsales.OrderDateKey
+	toColumn: dimdate.DateKey
+
+relationship 49d7f2a1-34a6-0764-84ed-fc6baefdca42
+	fromColumn: factinternetsales.ProductKey
+	toColumn: dimproduct.ProductKey
+
+relationship 13b6286f-8f00-818e-8856-dd735b81311f
+	fromColumn: factinternetsales.SalesTerritoryKey
+	toColumn: dimsalesterritory.SalesTerritoryKey
+
