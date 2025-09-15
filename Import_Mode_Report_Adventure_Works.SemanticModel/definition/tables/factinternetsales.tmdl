@@ -1,6 +1,20 @@
 table factinternetsales
 	lineageTag: 36445c1e-6615-41d7-a413-b1e57b4fa45c
 
+	refreshPolicy
+		policyType: basic
+		rollingWindowGranularity: year
+		rollingWindowPeriods: 20
+		incrementalGranularity: year
+		incrementalPeriods: 12
+		sourceExpression =
+			let
+			    Source = Sql.Database("77oajh3wezeejnmdlu54fth3om-dmv4edvgwhgubprebu6z6x7bom.datawarehouse.fabric.microsoft.com", "Lakehouse_Adventure_Works"),
+			    dbo_factinternetsales = Source{[Schema="dbo",Item="factinternetsales"]}[Data],
+			    #"Filtered Rows" = Table.SelectRows(dbo_factinternetsales, each [OrderDateKey] > DateKey(RangeStart) and [OrderDateKey] <= DateKey(RangeEnd))
+			in
+			    #"Filtered Rows"
+
 	column ProductKey
 		dataType: int64
 		formatString: 0
