@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "DataPipeline",
+    "displayName": "pipeline_refresh_adventure_works"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "d7cdd0c6-a6d2-ae5b-4b67-5f10753751b9"
+  }
+}

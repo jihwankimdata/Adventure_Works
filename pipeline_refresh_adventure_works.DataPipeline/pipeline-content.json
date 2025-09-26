@@ -1,0 +1,101 @@
+{
+  "properties": {
+    "activities": [
+      {
+        "name": "Products",
+        "type": "RefreshDataflow",
+        "dependsOn": [],
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureOutput": false,
+          "secureInput": false
+        },
+        "typeProperties": {
+          "dataflowId": "af9a98d5-8360-4947-8163-5457d8ecfe37",
+          "workspaceId": "0ec22b1b-b1a6-40cd-be24-0d3d9f5fe173",
+          "notifyOption": "NoNotification",
+          "dataflowType": "Dataflow-Gen2"
+        }
+      },
+      {
+        "name": "Adventure Works",
+        "type": "PBISemanticModelRefresh",
+        "dependsOn": [
+          {
+            "activity": "Products",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          },
+          {
+            "activity": "Customers",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ],
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureOutput": false,
+          "secureInput": false
+        },
+        "typeProperties": {
+          "method": "POST",
+          "operationType": "SemanticModelRefresh",
+          "waitOnCompletion": true,
+          "commitMode": "Transactional",
+          "groupId": "0ec22b1b-b1a6-40cd-be24-0d3d9f5fe173",
+          "datasetId": "884c031a-1565-4960-94cd-1a1bded191e9",
+          "objects": [
+            {
+              "table": "Customer"
+            },
+            {
+              "table": "Products"
+            },
+            {
+              "table": "dimdate"
+            },
+            {
+              "table": "factinternetsales"
+            }
+          ]
+        },
+        "externalReferences": {
+          "connection": "eee2ec59-a714-4799-bde9-b26fd5ae1504"
+        }
+      },
+      {
+        "name": "Customers",
+        "type": "RefreshDataflow",
+        "dependsOn": [],
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureOutput": false,
+          "secureInput": false
+        },
+        "typeProperties": {
+          "dataflowId": "606aa471-ef36-4b13-be24-91b7e3091c3c",
+          "workspaceId": "0ec22b1b-b1a6-40cd-be24-0d3d9f5fe173",
+          "notifyOption": "NoNotification",
+          "dataflowType": "Dataflow-Gen2"
+        }
+      }
+    ],
+    "logicAppsConnectionPayload": {
+      "id": "/subscriptions/b15307d5-9c8f-4130-9ccd-eb10ffe47146/resourceGroups/connections-0ec22b1b-b1a6-40cd-be24-0d3d9f5fe173/providers/Microsoft.Web/connections/2_753751b9-5f10-4b67-ae5b-a6d2d7cdd0c6_c54714f9-05f9-49e7-8f21-9c61243ee40e",
+      "properties": {
+        "api": {
+          "name": "teams",
+          "id": "/subscriptions/b15307d5-9c8f-4130-9ccd-eb10ffe47146/providers/Microsoft.Web/locations/westeurope/managedApis/teams"
+        }
+      }
+    }
+  }
+}
