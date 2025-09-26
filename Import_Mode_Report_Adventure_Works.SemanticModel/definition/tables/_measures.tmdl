@@ -13,14 +13,6 @@ table _measures
 		formatString: #,0.00
 		lineageTag: 52fbb1b6-4913-4b61-bb0b-11e3cd162764
 
-	column Column1
-		dataType: string
-		lineageTag: 4c80e80e-94d8-41d4-9b04-436a23551bce
-		summarizeBy: none
-		sourceColumn: Column1
-
-		annotation SummarizationSetBy = Automatic
-
 	partition _measures = m
 		mode: import
 		source =
