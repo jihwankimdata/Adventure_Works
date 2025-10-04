@@ -8,11 +8,13 @@ model Model
 
 annotation __PBI_TimeIntelligenceEnabled = 0
 
-annotation PBI_QueryOrder = ["Customer","Products","dimdate","factinternetsales"]
+annotation PBI_QueryOrder = ["Customer","Products","dim_calendar","factinternetsales"]
+
+annotation PBI_ProTooling = ["WebModelingEdit"]
 
 ref table Customer
 ref table Products
-ref table dimdate
+ref table dim_calendar
 ref table factinternetsales
 
 ref cultureInfo en-US
