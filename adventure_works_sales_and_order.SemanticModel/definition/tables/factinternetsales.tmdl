@@ -1,7 +1,7 @@
 table factinternetsales
 	lineageTag: 208f71a0-6189-4a43-a46a-30c14fbc183b
 
-	measure 'Total Sales Amount Measure:' = SUM(factinternetsales[SalesAmount])
+	measure 'Total Sales Amount Measure:' = SUM(factinternetsales[SalesAmount]) //add comments to document
 		lineageTag: 638b9c36-82d0-41bc-815e-639ae7efc8c8
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}

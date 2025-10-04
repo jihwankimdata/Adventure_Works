@@ -10,7 +10,7 @@ annotation __PBI_TimeIntelligenceEnabled = 0
 
 annotation PBI_QueryOrder = ["Customer","Products","dim_calendar","factinternetsales"]
 
-annotation PBI_ProTooling = ["WebModelingEdit"]
+annotation PBI_ProTooling = ["WebModelingEdit","TMDL-Extension"]
 
 ref table Customer
 ref table Products
