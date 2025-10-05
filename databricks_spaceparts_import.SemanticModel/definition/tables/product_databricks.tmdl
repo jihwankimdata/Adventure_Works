@@ -1,0 +1,129 @@
+table product_databricks
+	lineageTag: 3414664b-ad18-4b88-8670-e77b0d845941
+
+	column ProductKey
+		dataType: int64
+		lineageTag: 0f2ff673-901a-435d-8ccc-3e9c65873dc5
+		sourceColumn: ProductKey
+
+	column ProductId
+		dataType: int64
+		lineageTag: 77484d23-93de-410c-8db0-181a04b28806
+		sourceColumn: ProductId
+
+	column SubBrandName
+		dataType: string
+		lineageTag: b97f80f7-f191-486f-8ede-f41007d72b40
+		sourceColumn: SubBrandName
+
+	column ShipClassForPart
+		dataType: string
+		lineageTag: 3b315228-2ffd-4c55-9201-9fc54dc88f93
+		sourceColumn: ShipClassForPart
+
+	column ProductName
+		dataType: string
+		lineageTag: b911bcdd-3c5e-41e6-807b-3ed49a55a5aa
+		sourceColumn: ProductName
+
+	column ProductBusinessLineLeader
+		dataType: string
+		lineageTag: b0ea98af-4947-4922-aa32-69d2c123c3cd
+		sourceColumn: ProductBusinessLineLeader
+
+	column PartFitGrading
+		dataType: string
+		lineageTag: 90642597-311b-41e5-8b76-d92d13b6f346
+		sourceColumn: PartFitGrading
+
+	column Subtype
+		dataType: string
+		lineageTag: 6c2ae8fd-2efb-4ec1-b545-21ce6c6e1e90
+		sourceColumn: Subtype
+
+	column Type
+		dataType: string
+		lineageTag: db81ebda-9e9f-404b-9030-40b80964a076
+		sourceColumn: Type
+
+	column WeightTonnes
+		dataType: decimal
+		lineageTag: 0069e7ac-25f7-4ae8-82d9-61939e7b22e2
+		sourceColumn: WeightTonnes
+
+	column MaximumTemperatureK
+		dataType: int64
+		lineageTag: 07bcd91a-dbcc-4256-b3e5-ea7e9fb615a2
+		sourceColumn: MaximumTemperatureK
+
+	column VelocityToleranceMetersSecond
+		dataType: int64
+		lineageTag: 10270f07-9e92-4f3f-8bb5-2232413f7eb7
+		sourceColumn: VelocityToleranceMetersSecond
+
+	column ToleranceG
+		dataType: int64
+		lineageTag: d90c8f7b-7570-433b-9680-25603e7df374
+		sourceColumn: ToleranceG
+
+	column MK
+		dataType: string
+		lineageTag: 58d98381-f338-4bdb-adea-ff1ee8c1d8a1
+		sourceColumn: MK
+
+	column Color
+		dataType: string
+		lineageTag: cd0a8ad2-28ad-4c5c-8ab9-c29a397447d4
+		sourceColumn: Color
+
+	column ProductionSeries
+		dataType: string
+		lineageTag: 49d50b75-fac0-4169-bcf2-bfee23b7c677
+		sourceColumn: ProductionSeries
+
+	column Nameplate
+		dataType: string
+		lineageTag: 0bea9c07-1028-497c-a764-aa6f06e7818e
+		sourceColumn: Nameplate
+
+	column Material
+		dataType: string
+		lineageTag: f4af83ba-f80d-4cdb-8572-af1ecd79e463
+		sourceColumn: Material
+
+	column BrandFlagshipStatus
+		dataType: string
+		lineageTag: a603da30-73b0-4814-abfc-38756d7c8016
+		sourceColumn: BrandFlagshipStatus
+
+	column BrandClass
+		dataType: string
+		lineageTag: b4a25cbe-dad7-4a25-9f92-215938fb1857
+		sourceColumn: BrandClass
+
+	column BrandType
+		dataType: string
+		lineageTag: f51679ae-a0bb-41d3-a87e-833923f69f30
+		sourceColumn: BrandType
+
+	column BrandName
+		dataType: string
+		lineageTag: 9fadaf54-33ef-4bd8-a6c4-5dbb71f28c25
+		sourceColumn: BrandName
+
+	column BrandVP
+		dataType: string
+		lineageTag: cc556695-acf8-46a2-8b32-c4d84c60a030
+		sourceColumn: BrandVP
+
+	partition product_databricks = m
+		mode: import
+		source =
+				let
+				    Source = DatabricksMultiCloud.Catalogs("dbc-3f1cd0d5-6766.cloud.databricks.com", "/sql/1.0/warehouses/304212cca4862ea4", null),
+				    Database = Source{[Name="spacepartscodw",Kind="Database"]}[Data],
+				    Schema = Database{[Name="dim",Kind="Schema"]}[Data],
+				    Data = Schema{[Name="product",Kind="Table"]}[Data]
+				in
+				    Data
+

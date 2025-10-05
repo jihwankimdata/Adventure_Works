@@ -1,0 +1,44 @@
+table order_status_databricks
+	lineageTag: ee382a9b-cba5-42cd-8764-02e2029131da
+
+	column OrderStatusKey
+		dataType: int64
+		lineageTag: a7aee5b2-68f6-410e-852a-ed268f9ab771
+		sourceColumn: OrderStatusKey
+
+	column OrderStatusCode
+		dataType: string
+		lineageTag: 031ff2df-85c3-49f6-887c-3e713dffdd9d
+		sourceColumn: OrderStatusCode
+
+	column OrderStatusText
+		dataType: string
+		lineageTag: 8d1f1730-4def-425d-ad6f-a36010bee554
+		sourceColumn: OrderStatusText
+
+	column OrderStatusOrder
+		dataType: int64
+		lineageTag: 38764def-d915-43dc-bfa4-b28a9ff62b02
+		sourceColumn: OrderStatusOrder
+
+	column OrderStatusGroup
+		dataType: string
+		lineageTag: 78f22da5-e2b5-486f-bdc2-ffe440b09362
+		sourceColumn: OrderStatusGroup
+
+	column OrderStatusGroupOrder
+		dataType: int64
+		lineageTag: 852bf9d0-2434-494e-95e7-bbc33b1771c9
+		sourceColumn: OrderStatusGroupOrder
+
+	partition order_status_databricks = m
+		mode: import
+		source =
+				let
+				    Source = DatabricksMultiCloud.Catalogs("dbc-3f1cd0d5-6766.cloud.databricks.com", "/sql/1.0/warehouses/304212cca4862ea4", null),
+				    Database = Source{[Name="spacepartscodw",Kind="Database"]}[Data],
+				    Schema = Database{[Name="dim",Kind="Schema"]}[Data],
+				    Data = Schema{[Name="order_status",Kind="Table"]}[Data]
+				in
+				    Data
+

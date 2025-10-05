@@ -1,0 +1,12 @@
+relationship AutoDetected_3b62abae-28ff-4158-9b3a-ea46748cedfc
+	fromColumn: factinternetsales.CustomerKey
+	toColumn: Customer.CustomerKey
+
+relationship AutoDetected_05af4357-7a81-4ad7-89ed-8f740ff8ec17
+	fromColumn: factinternetsales.ProductKey
+	toColumn: Products.ProductKey
+
+relationship 347f86c1-52cf-e70d-bbca-7b04b727a090
+	fromColumn: factinternetsales.OrderDateKey
+	toColumn: dim_calendar.DateKey
+
