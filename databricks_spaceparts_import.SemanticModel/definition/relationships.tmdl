@@ -1,12 +1,58 @@
-relationship AutoDetected_3b62abae-28ff-4158-9b3a-ea46748cedfc
-	fromColumn: factinternetsales.CustomerKey
-	toColumn: Customer.CustomerKey
+relationship b4a9cefe-f15d-48fc-a331-7d36557eda7a
+	fromColumn: orders_fact_databricks.CustomerKey
+	toColumn: customer_databricks.CustomerKey
 
-relationship AutoDetected_05af4357-7a81-4ad7-89ed-8f740ff8ec17
-	fromColumn: factinternetsales.ProductKey
-	toColumn: Products.ProductKey
+	annotation PBI_IsFromSource = FS
 
-relationship 347f86c1-52cf-e70d-bbca-7b04b727a090
-	fromColumn: factinternetsales.OrderDateKey
-	toColumn: dim_calendar.DateKey
+relationship ad564986-e647-4316-a5eb-5fd18e874d8e
+	isActive: false
+	fromColumn: orders_fact_databricks.BillingDate
+	toColumn: date_databricks.Date
+
+	annotation PBI_IsFromSource = FS
+
+relationship 28321a53-5557-4628-a88e-8e2b893f684f
+	isActive: false
+	fromColumn: orders_fact_databricks.ConfirmGoodsReceiptDate
+	toColumn: date_databricks.Date
+
+	annotation PBI_IsFromSource = FS
+
+relationship a68a7af0-766f-4b16-a1e1-02d622fd2600
+	fromColumn: orders_fact_databricks.OrderDate
+	toColumn: date_databricks.Date
+
+	annotation PBI_IsFromSource = FS
+
+relationship e4b67f44-c628-4208-bdad-a1b47ecfc59a
+	isActive: false
+	fromColumn: orders_fact_databricks.RequestGoodsReceiptDate
+	toColumn: date_databricks.Date
+
+	annotation PBI_IsFromSource = FS
+
+relationship b724639a-137c-4f44-b53d-8bf0156eb715
+	isActive: false
+	fromColumn: orders_fact_databricks.ShipDate
+	toColumn: date_databricks.Date
+
+	annotation PBI_IsFromSource = FS
+
+relationship 0e4a47ed-805b-41f8-8789-787938e640aa
+	fromColumn: orders_fact_databricks.OrderDocTypeKey
+	toColumn: order_doc_type_databricks.OrderDocTypeKey
+
+	annotation PBI_IsFromSource = FS
+
+relationship 81f995d5-bc9c-4ba1-97e5-7b59c713f444
+	fromColumn: orders_fact_databricks.OrderStatusKey
+	toColumn: order_status_databricks.OrderStatusKey
+
+	annotation PBI_IsFromSource = FS
+
+relationship 344c875d-bd19-44f2-9956-9c2424600627
+	fromColumn: orders_fact_databricks.ProductKey
+	toColumn: product_databricks.ProductKey
+
+	annotation PBI_IsFromSource = FS
 

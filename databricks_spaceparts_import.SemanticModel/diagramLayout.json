@@ -1,0 +1,100 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 253.48987836576828,
+            "y": 0
+          },
+          "nodeIndex": "customer_databricks",
+          "nodeLineageTag": "4dd73295-7f7e-44e7-a3c0-877de0dc62fe",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 509.20091571838122,
+            "y": 0
+          },
+          "nodeIndex": "order_doc_type_databricks",
+          "nodeLineageTag": "5d7842de-9209-4729-8b64-8b33a18b0c62",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 768.80892394708883,
+            "y": 0
+          },
+          "nodeIndex": "order_status_databricks",
+          "nodeLineageTag": "ee382a9b-cba5-42cd-8764-02e2029131da",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 484.32841182277724
+          },
+          "nodeIndex": "orders_fact_databricks",
+          "nodeLineageTag": "4358766d-678b-491e-9563-a605920bdfa7",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1021.9026795103225,
+            "y": 1.5167669023097048
+          },
+          "nodeIndex": "product_databricks",
+          "nodeLineageTag": "3414664b-ad18-4b88-8670-e77b0d845941",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 0
+          },
+          "nodeIndex": "date_databricks",
+          "nodeLineageTag": "1e2115a6-c857-4089-ad61-608865341e6d",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 86.800314508024385,
+      "pinKeyFieldsToTop": true,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

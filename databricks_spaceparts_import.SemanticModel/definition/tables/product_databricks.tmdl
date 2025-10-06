@@ -4,117 +4,188 @@ table product_databricks
 	column ProductKey
 		dataType: int64
 		lineageTag: 0f2ff673-901a-435d-8ccc-3e9c65873dc5
+		summarizeBy: none
 		sourceColumn: ProductKey
+
+		annotation SummarizationSetBy = Automatic
 
 	column ProductId
 		dataType: int64
 		lineageTag: 77484d23-93de-410c-8db0-181a04b28806
+		summarizeBy: none
 		sourceColumn: ProductId
+
+		annotation SummarizationSetBy = Automatic
 
 	column SubBrandName
 		dataType: string
 		lineageTag: b97f80f7-f191-486f-8ede-f41007d72b40
+		summarizeBy: none
 		sourceColumn: SubBrandName
+
+		annotation SummarizationSetBy = Automatic
 
 	column ShipClassForPart
 		dataType: string
 		lineageTag: 3b315228-2ffd-4c55-9201-9fc54dc88f93
+		summarizeBy: none
 		sourceColumn: ShipClassForPart
+
+		annotation SummarizationSetBy = Automatic
 
 	column ProductName
 		dataType: string
 		lineageTag: b911bcdd-3c5e-41e6-807b-3ed49a55a5aa
+		summarizeBy: none
 		sourceColumn: ProductName
+
+		annotation SummarizationSetBy = Automatic
 
 	column ProductBusinessLineLeader
 		dataType: string
 		lineageTag: b0ea98af-4947-4922-aa32-69d2c123c3cd
+		summarizeBy: none
 		sourceColumn: ProductBusinessLineLeader
+
+		annotation SummarizationSetBy = Automatic
 
 	column PartFitGrading
 		dataType: string
 		lineageTag: 90642597-311b-41e5-8b76-d92d13b6f346
+		summarizeBy: none
 		sourceColumn: PartFitGrading
+
+		annotation SummarizationSetBy = Automatic
 
 	column Subtype
 		dataType: string
 		lineageTag: 6c2ae8fd-2efb-4ec1-b545-21ce6c6e1e90
+		summarizeBy: none
 		sourceColumn: Subtype
+
+		annotation SummarizationSetBy = Automatic
 
 	column Type
 		dataType: string
 		lineageTag: db81ebda-9e9f-404b-9030-40b80964a076
+		summarizeBy: none
 		sourceColumn: Type
 
+		annotation SummarizationSetBy = Automatic
+
 	column WeightTonnes
-		dataType: decimal
+		dataType: double
 		lineageTag: 0069e7ac-25f7-4ae8-82d9-61939e7b22e2
+		summarizeBy: none
 		sourceColumn: WeightTonnes
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column MaximumTemperatureK
 		dataType: int64
 		lineageTag: 07bcd91a-dbcc-4256-b3e5-ea7e9fb615a2
+		summarizeBy: none
 		sourceColumn: MaximumTemperatureK
+
+		annotation SummarizationSetBy = Automatic
 
 	column VelocityToleranceMetersSecond
 		dataType: int64
 		lineageTag: 10270f07-9e92-4f3f-8bb5-2232413f7eb7
+		summarizeBy: none
 		sourceColumn: VelocityToleranceMetersSecond
+
+		annotation SummarizationSetBy = Automatic
 
 	column ToleranceG
 		dataType: int64
 		lineageTag: d90c8f7b-7570-433b-9680-25603e7df374
+		summarizeBy: none
 		sourceColumn: ToleranceG
+
+		annotation SummarizationSetBy = Automatic
 
 	column MK
 		dataType: string
 		lineageTag: 58d98381-f338-4bdb-adea-ff1ee8c1d8a1
+		summarizeBy: none
 		sourceColumn: MK
+
+		annotation SummarizationSetBy = Automatic
 
 	column Color
 		dataType: string
 		lineageTag: cd0a8ad2-28ad-4c5c-8ab9-c29a397447d4
+		summarizeBy: none
 		sourceColumn: Color
+
+		annotation SummarizationSetBy = Automatic
 
 	column ProductionSeries
 		dataType: string
 		lineageTag: 49d50b75-fac0-4169-bcf2-bfee23b7c677
+		summarizeBy: none
 		sourceColumn: ProductionSeries
+
+		annotation SummarizationSetBy = Automatic
 
 	column Nameplate
 		dataType: string
 		lineageTag: 0bea9c07-1028-497c-a764-aa6f06e7818e
+		summarizeBy: none
 		sourceColumn: Nameplate
+
+		annotation SummarizationSetBy = Automatic
 
 	column Material
 		dataType: string
 		lineageTag: f4af83ba-f80d-4cdb-8572-af1ecd79e463
+		summarizeBy: none
 		sourceColumn: Material
+
+		annotation SummarizationSetBy = Automatic
 
 	column BrandFlagshipStatus
 		dataType: string
 		lineageTag: a603da30-73b0-4814-abfc-38756d7c8016
+		summarizeBy: none
 		sourceColumn: BrandFlagshipStatus
+
+		annotation SummarizationSetBy = Automatic
 
 	column BrandClass
 		dataType: string
 		lineageTag: b4a25cbe-dad7-4a25-9f92-215938fb1857
+		summarizeBy: none
 		sourceColumn: BrandClass
+
+		annotation SummarizationSetBy = Automatic
 
 	column BrandType
 		dataType: string
 		lineageTag: f51679ae-a0bb-41d3-a87e-833923f69f30
+		summarizeBy: none
 		sourceColumn: BrandType
+
+		annotation SummarizationSetBy = Automatic
 
 	column BrandName
 		dataType: string
 		lineageTag: 9fadaf54-33ef-4bd8-a6c4-5dbb71f28c25
+		summarizeBy: none
 		sourceColumn: BrandName
+
+		annotation SummarizationSetBy = Automatic
 
 	column BrandVP
 		dataType: string
 		lineageTag: cc556695-acf8-46a2-8b32-c4d84c60a030
+		summarizeBy: none
 		sourceColumn: BrandVP
+
+		annotation SummarizationSetBy = Automatic
 
 	partition product_databricks = m
 		mode: import

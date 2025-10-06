@@ -4,32 +4,50 @@ table order_doc_type_databricks
 	column OrderDocTypeKey
 		dataType: int64
 		lineageTag: 7090cdd4-073b-40ee-8290-7eecfef35e80
+		summarizeBy: none
 		sourceColumn: OrderDocTypeKey
+
+		annotation SummarizationSetBy = Automatic
 
 	column OrderDocTypeCode
 		dataType: string
 		lineageTag: f30651a0-f024-42e0-9294-8d33cd69defb
+		summarizeBy: none
 		sourceColumn: OrderDocTypeCode
+
+		annotation SummarizationSetBy = Automatic
 
 	column OrderDocTypeText
 		dataType: string
 		lineageTag: cde32355-0a53-4de9-8b35-3e29d00b5ab8
+		summarizeBy: none
 		sourceColumn: OrderDocTypeText
+
+		annotation SummarizationSetBy = Automatic
 
 	column OrderDocTypeOrder
 		dataType: int64
 		lineageTag: 8eba42ae-3674-4406-9130-2a6d54b9c021
+		summarizeBy: none
 		sourceColumn: OrderDocTypeOrder
+
+		annotation SummarizationSetBy = Automatic
 
 	column OrderDocTypeGroup
 		dataType: string
 		lineageTag: 8ec84415-4267-4a6c-868f-7af2acf985bc
+		summarizeBy: none
 		sourceColumn: OrderDocTypeGroup
+
+		annotation SummarizationSetBy = Automatic
 
 	column OrderDocTypeGroupOrder
 		dataType: int64
 		lineageTag: e7037cb5-106d-4cf9-8942-c8febe094c6f
+		summarizeBy: none
 		sourceColumn: OrderDocTypeGroupOrder
+
+		annotation SummarizationSetBy = Automatic
 
 	partition order_doc_type_databricks = m
 		mode: import
@@ -41,4 +59,6 @@ table order_doc_type_databricks
 				    Data = Schema{[Name="order_doc_type",Kind="Table"]}[Data]
 				in
 				    Data
+
+	annotation PBI_ResultType = Table
 

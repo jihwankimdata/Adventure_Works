@@ -4,32 +4,50 @@ table order_status_databricks
 	column OrderStatusKey
 		dataType: int64
 		lineageTag: a7aee5b2-68f6-410e-852a-ed268f9ab771
+		summarizeBy: none
 		sourceColumn: OrderStatusKey
+
+		annotation SummarizationSetBy = Automatic
 
 	column OrderStatusCode
 		dataType: string
 		lineageTag: 031ff2df-85c3-49f6-887c-3e713dffdd9d
+		summarizeBy: none
 		sourceColumn: OrderStatusCode
+
+		annotation SummarizationSetBy = Automatic
 
 	column OrderStatusText
 		dataType: string
 		lineageTag: 8d1f1730-4def-425d-ad6f-a36010bee554
+		summarizeBy: none
 		sourceColumn: OrderStatusText
+
+		annotation SummarizationSetBy = Automatic
 
 	column OrderStatusOrder
 		dataType: int64
 		lineageTag: 38764def-d915-43dc-bfa4-b28a9ff62b02
+		summarizeBy: none
 		sourceColumn: OrderStatusOrder
+
+		annotation SummarizationSetBy = Automatic
 
 	column OrderStatusGroup
 		dataType: string
 		lineageTag: 78f22da5-e2b5-486f-bdc2-ffe440b09362
+		summarizeBy: none
 		sourceColumn: OrderStatusGroup
+
+		annotation SummarizationSetBy = Automatic
 
 	column OrderStatusGroupOrder
 		dataType: int64
 		lineageTag: 852bf9d0-2434-494e-95e7-bbc33b1771c9
+		summarizeBy: none
 		sourceColumn: OrderStatusGroupOrder
+
+		annotation SummarizationSetBy = Automatic
 
 	partition order_status_databricks = m
 		mode: import
