@@ -1,0 +1,190 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "name": "facd725e08268a37ee24",
+  "position": {
+    "x": 21.146744412050534,
+    "y": 253.7609329446064,
+    "z": 0,
+    "height": 431.64237123420793,
+    "width": 844.625850340136
+  },
+  "visual": {
+    "visualType": "pivotTable",
+    "query": {
+      "queryState": {
+        "Columns": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "date_databricks"
+                    }
+                  },
+                  "Property": "CalendarYear"
+                }
+              },
+              "queryRef": "date_databricks.CalendarYear",
+              "nativeQueryRef": "CalendarYear",
+              "active": true
+            }
+          ]
+        },
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "product_databricks"
+                    }
+                  },
+                  "Property": "BrandName"
+                }
+              },
+              "queryRef": "product_databricks.BrandName",
+              "nativeQueryRef": "BrandName",
+              "active": true
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measure"
+                    }
+                  },
+                  "Property": "Net order value:"
+                }
+              },
+              "queryRef": "_Measure.Net order value:",
+              "nativeQueryRef": "Net order value:"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "values": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "rowHeaders": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "subTotals": [
+        {
+          "properties": {
+            "columnSubtotals": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "d85c11f5739b00e0a1b2",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Measure"
+              }
+            },
+            "Property": "Net order value:"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "f31e52d0da04cb8e4928",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "date_databricks"
+              }
+            },
+            "Property": "CalendarYear"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "630c3ef75bbbd5ca04e3",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "product_databricks"
+              }
+            },
+            "Property": "BrandName"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
+}

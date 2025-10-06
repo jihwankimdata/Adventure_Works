@@ -1,0 +1,157 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "name": "a7a0e17808560111a8d5",
+  "position": {
+    "x": 886.919339164237,
+    "y": 406.76384839650143,
+    "z": 2,
+    "height": 278.63945578231289,
+    "width": 383.12925170068024,
+    "tabOrder": 2
+  },
+  "visual": {
+    "visualType": "clusteredBarChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "order_doc_type_databricks"
+                    }
+                  },
+                  "Property": "OrderDocTypeText"
+                }
+              },
+              "queryRef": "order_doc_type_databricks.OrderDocTypeText",
+              "nativeQueryRef": "OrderDocTypeText",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measure"
+                    }
+                  },
+                  "Property": "Net order value:"
+                }
+              },
+              "queryRef": "_Measure.Net order value:",
+              "nativeQueryRef": "Net order value:"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "_Measure"
+                  }
+                },
+                "Property": "Net order value:"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "objects": {
+      "categoryAxis": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "maxMarginFactor": {
+              "expr": {
+                "Literal": {
+                  "Value": "40L"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "valueAxis": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "cf2b5b14635bc49c0d04",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Measure"
+              }
+            },
+            "Property": "Net order value:"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "f1bcfc2da4e0d8d23386",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "order_doc_type_databricks"
+              }
+            },
+            "Property": "OrderDocTypeText"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
+}
