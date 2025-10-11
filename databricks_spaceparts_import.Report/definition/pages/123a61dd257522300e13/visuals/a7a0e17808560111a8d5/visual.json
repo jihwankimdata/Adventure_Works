@@ -20,7 +20,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "order_doc_type_databricks"
+                      "Entity": "Order Type"
                     }
                   },
                   "Property": "OrderDocTypeText"
@@ -144,7 +144,7 @@
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "order_doc_type_databricks"
+                "Entity": "Order Type"
               }
             },
             "Property": "OrderDocTypeText"

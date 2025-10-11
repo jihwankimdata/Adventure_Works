@@ -19,7 +19,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "date_databricks"
+                      "Entity": "Date"
                     }
                   },
                   "Property": "CalendarYear"
@@ -38,7 +38,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "product_databricks"
+                      "Entity": "Product"
                     }
                   },
                   "Property": "BrandName"
@@ -163,7 +163,7 @@
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "date_databricks"
+                "Entity": "Date"
               }
             },
             "Property": "CalendarYear"
@@ -177,7 +177,7 @@
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "product_databricks"
+                "Entity": "Product"
               }
             },
             "Property": "BrandName"

@@ -1,4 +1,4 @@
-table product_databricks
+table Product
 	lineageTag: 3414664b-ad18-4b88-8670-e77b0d845941
 
 	column ProductKey
@@ -187,7 +187,7 @@ table product_databricks
 
 		annotation SummarizationSetBy = Automatic
 
-	partition product_databricks = m
+	partition Product = m
 		mode: import
 		source =
 				let
@@ -197,4 +197,6 @@ table product_databricks
 				    Data = Schema{[Name="product",Kind="Table"]}[Data]
 				in
 				    Data
+
+	changedProperty = Name
 

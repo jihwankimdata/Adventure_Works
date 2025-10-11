@@ -20,7 +20,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "customer_databricks"
+                      "Entity": "Customer"
                     }
                   },
                   "Property": "Territory"
@@ -130,7 +130,7 @@
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "customer_databricks"
+                "Entity": "Customer"
               }
             },
             "Property": "Territory"

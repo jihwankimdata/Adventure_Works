@@ -8,18 +8,18 @@ model Model
 
 annotation __PBI_TimeIntelligenceEnabled = 0
 
-annotation PBI_QueryOrder = ["customer_databricks","order_doc_type_databricks","order_status_databricks","product_databricks","orders_fact_databricks","date_databricks","_Measure"]
+annotation PBI_QueryOrder = ["Customer","Order Type","Order Status","Product","orders_fact_databricks","Date","_Measure"]
 
 annotation PBI_ProTooling = ["WebModelingEdit","TMDL-Extension","DevMode"]
 
 annotation __TEdtr = 1
 
-ref table customer_databricks
-ref table order_doc_type_databricks
-ref table order_status_databricks
-ref table product_databricks
+ref table Customer
+ref table 'Order Type'
+ref table 'Order Status'
+ref table Product
 ref table orders_fact_databricks
-ref table date_databricks
+ref table Date
 ref table _Measure
 
 ref cultureInfo en-US

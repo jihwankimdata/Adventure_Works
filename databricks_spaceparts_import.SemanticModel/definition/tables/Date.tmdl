@@ -1,4 +1,4 @@
-table date_databricks
+table Date
 	lineageTag: 1e2115a6-c857-4089-ad61-608865341e6d
 
 	column Date
@@ -96,7 +96,7 @@ table date_databricks
 
 		annotation SummarizationSetBy = Automatic
 
-	partition date_databricks = m
+	partition Date = m
 		mode: import
 		source =
 				let
@@ -106,6 +106,8 @@ table date_databricks
 				    Data = Schema{[Name="date",Kind="Table"]}[Data]
 				in
 				    Data
+
+	changedProperty = Name
 
 	annotation PBI_NavigationStepName = Navigation
 
