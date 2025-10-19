@@ -1,0 +1,92 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
+  "name": "ae7eac125388ab901e82",
+  "position": {
+    "x": 471.89399844115349,
+    "y": 157.63055339049103,
+    "z": 1,
+    "height": 514.79345284489477,
+    "width": 621.543257989088,
+    "tabOrder": 1
+  },
+  "visual": {
+    "visualType": "pivotTable",
+    "query": {
+      "queryState": {
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dimproduct"
+                    }
+                  },
+                  "Property": "EnglishProductName"
+                }
+              },
+              "queryRef": "dimproduct.EnglishProductName",
+              "nativeQueryRef": "EnglishProductName",
+              "active": true,
+              "displayName": "EnglishProductName"
+            }
+          ],
+          "fieldParameters": [
+            {
+              "parameterExpr": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "prm_dimensions"
+                    }
+                  },
+                  "Property": "prm_dimensions"
+                }
+              },
+              "index": 0,
+              "length": 1
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure"
+                    }
+                  },
+                  "Property": "sales:"
+                }
+              },
+              "queryRef": "Measure.sales:",
+              "nativeQueryRef": "sales:"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "26465ce5bee73e493e3d",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Measure"
+              }
+            },
+            "Property": "sales:"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

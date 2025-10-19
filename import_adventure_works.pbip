@@ -4,7 +4,7 @@
   "artifacts": [
     {
       "report": {
-        "path": "Report_Adventure_Works_v2.Report"
+        "path": "import_adventure_works.Report"
       }
     }
   ],

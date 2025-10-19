@@ -1,0 +1,126 @@
+table dimdate
+	lineageTag: 3aa486eb-127a-478b-973d-8b7b58493f36
+
+	column DateKey
+		dataType: int64
+		formatString: 0
+		lineageTag: ff5b0571-a0d5-4c44-9880-0cc912ee5ff9
+		summarizeBy: none
+		sourceColumn: DateKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column FullDateAlternateKey
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: ef42a6ab-769e-4c6a-a36f-f9999110c1f5
+		summarizeBy: none
+		sourceColumn: FullDateAlternateKey
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column DayNumberOfWeek
+		dataType: int64
+		formatString: 0
+		lineageTag: 6ea19167-4cb6-4a27-97da-105dc3413baa
+		summarizeBy: none
+		sourceColumn: DayNumberOfWeek
+
+		annotation SummarizationSetBy = Automatic
+
+	column EnglishDayNameOfWeek
+		dataType: string
+		lineageTag: 790f47c0-e8bf-425f-86fb-904b3c16adc8
+		summarizeBy: none
+		sourceColumn: EnglishDayNameOfWeek
+
+		annotation SummarizationSetBy = Automatic
+
+	column DayNumberOfMonth
+		dataType: int64
+		formatString: 0
+		lineageTag: f4d5b86f-b182-480b-a1c4-eb26aa2511e3
+		summarizeBy: none
+		sourceColumn: DayNumberOfMonth
+
+		annotation SummarizationSetBy = Automatic
+
+	column DayNumberOfYear
+		dataType: int64
+		formatString: 0
+		lineageTag: e7f9716a-0c77-4617-900e-711074fbe71b
+		summarizeBy: none
+		sourceColumn: DayNumberOfYear
+
+		annotation SummarizationSetBy = Automatic
+
+	column WeekNumberOfYear
+		dataType: int64
+		formatString: 0
+		lineageTag: 0faff530-c5ad-482f-af7a-8d7fa52de9f0
+		summarizeBy: none
+		sourceColumn: WeekNumberOfYear
+
+		annotation SummarizationSetBy = Automatic
+
+	column EnglishMonthName
+		dataType: string
+		lineageTag: 8a54a8c8-dfcd-4024-9102-071a2eaa0ff1
+		summarizeBy: none
+		sourceColumn: EnglishMonthName
+
+		annotation SummarizationSetBy = Automatic
+
+	column MonthNumberOfYear
+		dataType: int64
+		formatString: 0
+		lineageTag: 984d7a5b-3606-433b-8e39-bb81ec6c7cd8
+		summarizeBy: none
+		sourceColumn: MonthNumberOfYear
+
+		annotation SummarizationSetBy = Automatic
+
+	column CalendarQuarter
+		dataType: int64
+		formatString: 0
+		lineageTag: db79a0a7-c7f9-45c3-8c09-6c0c07346f5f
+		summarizeBy: none
+		sourceColumn: CalendarQuarter
+
+		annotation SummarizationSetBy = Automatic
+
+	column CalendarYear
+		dataType: int64
+		formatString: 0
+		lineageTag: 2517bea2-0a0f-4799-9668-555e72aed396
+		summarizeBy: none
+		sourceColumn: CalendarYear
+
+		annotation SummarizationSetBy = Automatic
+
+	column CalendarSemester
+		dataType: int64
+		formatString: 0
+		lineageTag: 116aa309-14ef-4b50-a49a-200c0e565b18
+		summarizeBy: none
+		sourceColumn: CalendarSemester
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dimdate = m
+		mode: import
+		queryGroup: import_dim
+		source =
+				let
+				    Source = Sql.Database("77oajh3wezeejnmdlu54fth3om-dmv4edvgwhgubprebu6z6x7bom.datawarehouse.fabric.microsoft.com", "Lakehouse_Adventure_Works"),
+				    dbo_dimdate = Source{[Schema="dbo",Item="dimdate"]}[Data],
+				    #"Removed Other Columns" = Table.SelectColumns(dbo_dimdate,{"DateKey", "FullDateAlternateKey", "DayNumberOfWeek", "EnglishDayNameOfWeek", "DayNumberOfMonth", "DayNumberOfYear", "WeekNumberOfYear", "EnglishMonthName", "MonthNumberOfYear", "CalendarQuarter", "CalendarYear", "CalendarSemester"})
+				in
+				    #"Removed Other Columns"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

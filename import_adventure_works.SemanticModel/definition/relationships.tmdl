@@ -1,0 +1,16 @@
+relationship AutoDetected_85ec935c-c63d-4938-b4f7-425e2d5379ee
+	fromColumn: factinternetsales.CustomerKey
+	toColumn: dimcustomer.CustomerKey
+
+relationship AutoDetected_9bdc8cdc-85ba-49aa-b6f3-c4552ecfb849
+	fromColumn: factinternetsales.ProductKey
+	toColumn: dimproduct.ProductKey
+
+relationship AutoDetected_96da1a42-1c7f-4d3a-afab-4c4419cdefdf
+	fromColumn: factinternetsales.SalesTerritoryKey
+	toColumn: dimsalesterritory.SalesTerritoryKey
+
+relationship bee39b27-b510-9565-2ea2-56e6963d63ec
+	fromColumn: factinternetsales.OrderDateKey
+	toColumn: dimdate.DateKey
+
