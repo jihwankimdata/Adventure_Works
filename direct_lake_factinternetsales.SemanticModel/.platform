@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "direct_lake_factinternetsales"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "a97114a8-a344-9ccd-49a7-8bcf61731ccf"
+  }
+}
