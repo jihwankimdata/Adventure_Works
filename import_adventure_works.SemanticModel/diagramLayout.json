@@ -66,20 +66,6 @@
         },
         {
           "location": {
-            "x": 0,
-            "y": 486.70507901698164
-          },
-          "nodeIndex": "factinternetsales",
-          "nodeLineageTag": "9a8e95d4-7913-40d7-9d03-29da35f8b22f",
-          "size": {
-            "height": 176,
-            "width": 234
-          },
-          "zIndex": 0,
-          "expandedHeight": 300
-        },
-        {
-          "location": {
             "x": 1123.63088471965,
             "y": 279.35253950849085
           },
@@ -103,6 +89,19 @@
             "width": 234
           },
           "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 486.70507901698164
+          },
+          "nodeIndex": "import_factinternetsales",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 0,
+          "expandedHeight": 300
         }
       ],
       "name": "All tables",

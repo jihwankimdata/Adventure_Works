@@ -1,7 +1,7 @@
 table Measure
 	lineageTag: 059ecee0-b4b5-4f62-99d3-d42f6b1f9ca8
 
-	measure sales: = SUM(factinternetsales[SalesAmount])
+	measure sales: = SUM(import_factinternetsales[SalesAmount])
 		lineageTag: 27be069b-1f54-4184-80a2-d6d661c95487
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}

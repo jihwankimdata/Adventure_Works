@@ -1,4 +1,4 @@
-table factinternetsales
+table import_factinternetsales
 	lineageTag: 9a8e95d4-7913-40d7-9d03-29da35f8b22f
 
 	column ProductKey
@@ -225,7 +225,7 @@ table factinternetsales
 
 		annotation SummarizationSetBy = Automatic
 
-	partition factinternetsales = m
+	partition import_factinternetsales = m
 		mode: import
 		queryGroup: import_fact
 		source =

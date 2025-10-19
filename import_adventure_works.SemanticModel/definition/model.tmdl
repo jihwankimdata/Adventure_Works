@@ -16,15 +16,15 @@ queryGroup import_fact
 
 annotation __PBI_TimeIntelligenceEnabled = 0
 
-annotation PBI_QueryOrder = ["dimcustomer","dimdate","dimproduct","dimsalesterritory","factinternetsales","Measure"]
+annotation PBI_QueryOrder = ["dimcustomer","dimdate","dimproduct","dimsalesterritory","import_factinternetsales","Measure"]
 
-annotation PBI_ProTooling = ["DevMode"]
+annotation PBI_ProTooling = ["DevMode","TMDLView_Desktop"]
 
 ref table dimcustomer
 ref table dimdate
 ref table dimproduct
 ref table dimsalesterritory
-ref table factinternetsales
+ref table import_factinternetsales
 ref table Measure
 ref table prm_dimensions
 
