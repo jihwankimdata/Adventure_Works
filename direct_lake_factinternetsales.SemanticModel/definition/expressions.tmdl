@@ -3,7 +3,7 @@ expression 'DirectLake - Lakehouse_Adventure_Works' =
 		    Source = AzureStorage.DataLake("https://onelake.dfs.fabric.microsoft.com/0ec22b1b-b1a6-40cd-be24-0d3d9f5fe173/3b8b3450-bf6e-47a6-b400-5b9035a2055b", [HierarchicalNavigation=true])
 		in
 		    Source
-	lineageTag: fb8ead6e-b2f8-4a67-97b9-c55245e5f8fe
+	lineageTag: ffcefc80-bce0-4701-a786-73248fe6c689
 
 	annotation PBI_IncludeFutureArtifacts = False
 

@@ -1,0 +1,49 @@
+table prm_dimensions
+	lineageTag: 1ff17bca-5d55-497e-8385-bb3b9c4388a0
+
+	column prm_dimensions
+		lineageTag: f5d4b2be-8dda-4fdf-881b-eeea6ae52f59
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'prm_dimensions Order'
+
+		relatedColumnDetails
+			groupByColumn: 'prm_dimensions Fields'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'prm_dimensions Fields'
+		isHidden
+		lineageTag: c97d5a1f-8986-4daf-8e34-ca065b08cd62
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'prm_dimensions Order'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'prm_dimensions Order'
+		isHidden
+		formatString: 0
+		lineageTag: e6aec26e-87f4-4e8f-a0b8-97b6593e1848
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition prm_dimensions = calculated
+		mode: import
+		source =
+				{
+				    ("Gender", NAMEOF('dimcustomer'[Gender]), 0),
+				    ("CalendarYear", NAMEOF('dimdate'[CalendarYear]), 1),
+				    ("EnglishProductName", NAMEOF('dimproduct'[EnglishProductName]), 2)
+				}
+
+	annotation PBI_Id = 9fbecb9b431c4f7ab669ae26346afd25
+
