@@ -6,7 +6,8 @@
     "y": 177.89359391965257,
     "z": 0,
     "height": 182.06297502714443,
-    "width": 280.73832790445169
+    "width": 280.73832790445169,
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "slicer",
@@ -145,12 +146,32 @@
         }
       ]
     },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 8,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
     "drillFilterOtherVisuals": true
   },
   "filterConfig": {
     "filters": [
       {
-        "name": "8fdc63f2693e803067d0",
+        "name": "5e9642919940c4100456",
         "field": {
           "Column": {
             "Expression": {

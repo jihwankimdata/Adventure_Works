@@ -4,10 +4,9 @@
   "position": {
     "x": 471.89399844115349,
     "y": 157.63055339049103,
-    "z": 1,
+    "z": 1000,
     "height": 514.79345284489477,
-    "width": 621.543257989088,
-    "tabOrder": 1
+    "width": 621.543257989088
   },
   "visual": {
     "visualType": "pivotTable",
@@ -69,12 +68,46 @@
         }
       }
     },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 2,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
     "drillFilterOtherVisuals": true
   },
   "filterConfig": {
     "filters": [
       {
-        "name": "26465ce5bee73e493e3d",
+        "name": "d2a2f0be59070b5ca786",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dimproduct"
+              }
+            },
+            "Property": "EnglishProductName"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "f68d607ce9a20e1496c7",
         "field": {
           "Measure": {
             "Expression": {
