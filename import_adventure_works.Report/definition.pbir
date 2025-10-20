@@ -3,7 +3,7 @@
   "version": "4.0",
   "datasetReference": {
     "byPath": {
-      "path": "../import_adventure_works.SemanticModel"
+      "path": "../direct_lake_factinternetsales.SemanticModel"
     }
   }
 }
