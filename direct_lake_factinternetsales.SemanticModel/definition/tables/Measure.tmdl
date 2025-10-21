@@ -6,6 +6,12 @@ table Measure
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	measure 'DL Sales' = SUM(factinternetsales[SalesAmount])
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: c3f6514b-21a4-4227-adb1-f41406a995a2
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
 	partition Measure = m
 		mode: import
 		source =

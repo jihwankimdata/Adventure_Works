@@ -14,7 +14,7 @@ table dimsalesterritory
 		dataType: int64
 		formatString: 0
 		lineageTag: 66a381a8-1b27-47cc-a014-c0afa2846d16
-		summarizeBy: none
+		summarizeBy: count
 		sourceColumn: SalesTerritoryAlternateKey
 
 		annotation SummarizationSetBy = Automatic

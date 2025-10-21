@@ -63,6 +63,20 @@
               },
               "queryRef": "Measure.sales:",
               "nativeQueryRef": "sales:"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure"
+                    }
+                  },
+                  "Property": "DL Sales"
+                }
+              },
+              "queryRef": "Measure.DL Sales",
+              "nativeQueryRef": "DL Sales"
             }
           ]
         }
@@ -102,6 +116,34 @@
               }
             },
             "Property": "sales:"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "4a3e143dbc62641d3cbe",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dimproduct"
+              }
+            },
+            "Property": "EnglishProductName"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "f9a65028fdc450623127",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Measure"
+              }
+            },
+            "Property": "DL Sales"
           }
         },
         "type": "Advanced"

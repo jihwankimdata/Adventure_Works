@@ -18,7 +18,7 @@ annotation PBI_QueryOrder = ["dimcustomer","dimdate","dimproduct","dimsalesterri
 
 annotation __PBI_TimeIntelligenceEnabled = 0
 
-annotation PBI_ProTooling = ["DevMode","TMDLView_Desktop","RemoteModeling","DirectLakeOnOneLakeMultisource"]
+annotation PBI_ProTooling = ["DevMode","TMDLView_Desktop","RemoteModeling","DirectLakeOnOneLakeMultisource","WebModelingEdit"]
 
 ref table dimcustomer
 ref table dimdate

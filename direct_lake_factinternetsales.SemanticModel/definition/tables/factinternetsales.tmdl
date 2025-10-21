@@ -7,7 +7,7 @@ table factinternetsales
 		formatString: 0
 		lineageTag: a31c2a49-63db-49c1-9e36-4566f9d36729
 		sourceLineageTag: ProductKey
-		summarizeBy: count
+		summarizeBy: none
 		sourceColumn: ProductKey
 
 		annotation SummarizationSetBy = Automatic
@@ -17,7 +17,7 @@ table factinternetsales
 		formatString: 0
 		lineageTag: d5b01c63-2f2c-4b6e-bbe7-ad366d3f07aa
 		sourceLineageTag: OrderDateKey
-		summarizeBy: count
+		summarizeBy: none
 		sourceColumn: OrderDateKey
 
 		annotation SummarizationSetBy = Automatic
@@ -47,7 +47,7 @@ table factinternetsales
 		formatString: 0
 		lineageTag: 2f6fbf6f-460d-491e-ad62-6dc93b1f07ae
 		sourceLineageTag: CustomerKey
-		summarizeBy: count
+		summarizeBy: none
 		sourceColumn: CustomerKey
 
 		annotation SummarizationSetBy = Automatic
@@ -77,7 +77,7 @@ table factinternetsales
 		formatString: 0
 		lineageTag: c502082b-3cb6-45f7-95dd-3944bc9d1c27
 		sourceLineageTag: SalesTerritoryKey
-		summarizeBy: count
+		summarizeBy: none
 		sourceColumn: SalesTerritoryKey
 
 		annotation SummarizationSetBy = Automatic

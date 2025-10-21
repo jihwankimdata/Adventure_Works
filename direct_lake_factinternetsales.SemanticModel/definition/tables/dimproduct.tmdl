@@ -13,7 +13,7 @@ table dimproduct
 	column ProductSubcategoryKey
 		dataType: double
 		lineageTag: 93bad042-ad87-4a3d-aec9-344d48d6b727
-		summarizeBy: none
+		summarizeBy: count
 		sourceColumn: ProductSubcategoryKey
 
 		annotation SummarizationSetBy = Automatic
@@ -47,7 +47,7 @@ table dimproduct
 	column StandardCost
 		dataType: double
 		lineageTag: 6cf4593d-ebc8-45b7-a4c1-17b190e419c6
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: StandardCost
 
 		annotation SummarizationSetBy = Automatic
@@ -75,7 +75,7 @@ table dimproduct
 		dataType: int64
 		formatString: 0
 		lineageTag: 98b09101-2ec0-47f3-9fd1-f345153d564b
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: SafetyStockLevel
 
 		annotation SummarizationSetBy = Automatic
@@ -84,7 +84,7 @@ table dimproduct
 		dataType: int64
 		formatString: 0
 		lineageTag: f7d1faac-5b0d-4d25-af8c-689f035761ac
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: ReorderPoint
 
 		annotation SummarizationSetBy = Automatic
@@ -92,7 +92,7 @@ table dimproduct
 	column ListPrice
 		dataType: double
 		lineageTag: 066c9a52-4eb2-4750-9158-ac0d06dc7038
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: ListPrice
 
 		annotation SummarizationSetBy = Automatic
@@ -118,7 +118,7 @@ table dimproduct
 	column Weight
 		dataType: double
 		lineageTag: 41f9db6a-d43e-4700-ab9d-7c572780b8be
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: Weight
 
 		annotation SummarizationSetBy = Automatic
@@ -129,7 +129,7 @@ table dimproduct
 		dataType: int64
 		formatString: 0
 		lineageTag: 79b7a750-e195-4077-bab8-af8704bd2588
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: DaysToManufacture
 
 		annotation SummarizationSetBy = Automatic
@@ -145,7 +145,7 @@ table dimproduct
 	column DealerPrice
 		dataType: double
 		lineageTag: bdd2a604-74ef-419c-89c8-3ef69d0d50a7
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: DealerPrice
 
 		annotation SummarizationSetBy = Automatic

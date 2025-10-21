@@ -25,7 +25,7 @@ table dimdate
 		dataType: int64
 		formatString: 0
 		lineageTag: 6ea19167-4cb6-4a27-97da-105dc3413baa
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: DayNumberOfWeek
 
 		annotation SummarizationSetBy = Automatic
@@ -42,7 +42,7 @@ table dimdate
 		dataType: int64
 		formatString: 0
 		lineageTag: f4d5b86f-b182-480b-a1c4-eb26aa2511e3
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: DayNumberOfMonth
 
 		annotation SummarizationSetBy = Automatic
@@ -51,7 +51,7 @@ table dimdate
 		dataType: int64
 		formatString: 0
 		lineageTag: e7f9716a-0c77-4617-900e-711074fbe71b
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: DayNumberOfYear
 
 		annotation SummarizationSetBy = Automatic
@@ -60,7 +60,7 @@ table dimdate
 		dataType: int64
 		formatString: 0
 		lineageTag: 0faff530-c5ad-482f-af7a-8d7fa52de9f0
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: WeekNumberOfYear
 
 		annotation SummarizationSetBy = Automatic
@@ -77,7 +77,7 @@ table dimdate
 		dataType: int64
 		formatString: 0
 		lineageTag: 984d7a5b-3606-433b-8e39-bb81ec6c7cd8
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: MonthNumberOfYear
 
 		annotation SummarizationSetBy = Automatic
@@ -86,7 +86,7 @@ table dimdate
 		dataType: int64
 		formatString: 0
 		lineageTag: db79a0a7-c7f9-45c3-8c09-6c0c07346f5f
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: CalendarQuarter
 
 		annotation SummarizationSetBy = Automatic
@@ -95,7 +95,7 @@ table dimdate
 		dataType: int64
 		formatString: 0
 		lineageTag: 2517bea2-0a0f-4799-9668-555e72aed396
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: CalendarYear
 
 		annotation SummarizationSetBy = Automatic
@@ -104,7 +104,7 @@ table dimdate
 		dataType: int64
 		formatString: 0
 		lineageTag: 116aa309-14ef-4b50-a49a-200c0e565b18
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: CalendarSemester
 
 		annotation SummarizationSetBy = Automatic
