@@ -14,3 +14,19 @@ relationship bee39b27-b510-9565-2ea2-56e6963d63ec
 	fromColumn: import_factinternetsales.OrderDateKey
 	toColumn: dimdate.DateKey
 
+relationship 91437939-fcde-c873-28a7-76ab1e83c5e1
+	fromColumn: factinternetsales.CustomerKey
+	toColumn: dimcustomer.CustomerKey
+
+relationship de0d7ffe-8a35-0a4e-d9a4-19fe6a5fd7af
+	fromColumn: factinternetsales.SalesTerritoryKey
+	toColumn: dimsalesterritory.SalesTerritoryKey
+
+relationship 1e5dc594-a21f-3476-162a-0bd97738d6a4
+	fromColumn: factinternetsales.OrderDateKey
+	toColumn: dimdate.DateKey
+
+relationship 5a91dbff-f2bb-13b9-9f39-5288027c0223
+	fromColumn: factinternetsales.ProductKey
+	toColumn: dimproduct.ProductKey
+
